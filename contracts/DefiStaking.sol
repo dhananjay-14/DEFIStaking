@@ -80,4 +80,8 @@ contract DEFIStaking {
         UserInfo storage user = userInfo[msg.sender];
         return user.stakedAmount;
     }
+       function viewRewards() public view returns(uint256){
+        UserInfo storage user = userInfo[msg.sender];
+        return user.rewardsEarned;
+    }
 }
