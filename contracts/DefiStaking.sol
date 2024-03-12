@@ -38,7 +38,6 @@ contract DEFIStaking {
         //effects
         updateRewards(user);
         user.stakedAmount += amount;
-        user.hasStaked=true;
         user.lastUpdateTime = block.timestamp;
         //interactions
         DEFI.safeTransferFrom(msg.sender, address(this), amount);
