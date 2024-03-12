@@ -15,7 +15,6 @@ contract DEFIStaking {
         uint256 stakedAmount;
         uint256 lastUpdateTime;
         uint256 rewardsEarned;
-        bool hasStaked;
     }
 
     mapping(address => UserInfo) public userInfo;
@@ -34,7 +33,8 @@ contract DEFIStaking {
         require(amount > 0, "Amount must be greater than 0");
        
         UserInfo storage user = userInfo[msg.sender];
-        require(user.hasStaked==false,"User is allowed to stake only once!!!");
+        // we can add a check if we want user to stake only once
+        // require(user.hasStaked==false,"User is allowed to stake only once!!!");
         //effects
         updateRewards(user);
         user.stakedAmount += amount;
