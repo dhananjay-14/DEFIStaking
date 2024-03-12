@@ -1,13 +1,9 @@
-# Sample Hardhat Project
+**DEFI Staking**
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project implements a staking contract for the DEFI token, allowing users to stake their DEFI tokens and earn rewards over time.
 
-Try running some of the following tasks:
+Smart Contracts
+DEFIStaking.sol
+This contract allows users to stake their DEFI tokens and earn rewards. Users can stake their tokens only once, and rewards are calculated based on the amount of DEFI tokens staked and the duration of staking.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+
